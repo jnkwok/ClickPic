@@ -78,6 +78,9 @@
     }];
 }
 
+- (IBAction)addPic:(id)sender {
+    
+}
 
 - (IBAction)downvote:(id)sender {
     CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.feedTableView];

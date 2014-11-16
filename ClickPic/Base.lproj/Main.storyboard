@@ -114,7 +114,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="541" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="78n-Vt-0JD">
-                                <rect key="frame" x="0.0" y="49" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="feedcell" selectionStyle="default" indentationWidth="10" rowHeight="541" id="X2y-cr-C7b" customClass="FeedCell">
@@ -124,10 +123,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vpt-Ch-U8G">
-                                                    <rect key="frame" x="0.0" y="1" width="612" height="540"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="612" height="540"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wh1-Gm-X4Z">
-                                                    <rect key="frame" x="8" y="36" width="561" height="75"/>
+                                                    <rect key="frame" x="8" y="35" width="561" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="RLT-YX-qXg"/>
                                                     </constraints>
@@ -136,7 +135,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCY-o8-GWe">
-                                                    <rect key="frame" x="261" y="479" width="78" height="21"/>
+                                                    <rect key="frame" x="261" y="478" width="78" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="78" id="BPp-ih-otA"/>
                                                         <constraint firstAttribute="height" constant="21" id="FkO-Ef-xbb"/>
@@ -146,7 +145,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9h-Hu-096">
-                                                    <rect key="frame" x="347" y="480" width="60" height="30"/>
+                                                    <rect key="frame" x="347" y="479" width="60" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="MtV-ts-0T8"/>
                                                         <constraint firstAttribute="height" constant="30" id="xhA-p8-CHO"/>
@@ -159,7 +158,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eK-oM-LMq">
-                                                    <rect key="frame" x="193" y="480" width="60" height="30"/>
+                                                    <rect key="frame" x="193" y="479" width="60" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Cd3-PO-9Z6"/>
                                                         <constraint firstAttribute="width" constant="60" id="ZvT-K3-jP2"/>
@@ -196,11 +195,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zii-gx-Zre">
+                                <rect key="frame" x="537" y="9" width="53" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Qkz-Hn-IGk"/>
+                                    <constraint firstAttribute="width" constant="53" id="SwH-FE-JjX"/>
+                                </constraints>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPic:" destination="OsY-8l-1y5" eventType="touchUpInside" id="lgR-dy-trV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="fqo-NW-ESv" secondAttribute="centerX" id="CKX-B2-bZI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zii-gx-Zre" secondAttribute="trailing" constant="-6" id="VcA-h7-JRG"/>
                             <constraint firstItem="fqo-NW-ESv" firstAttribute="top" secondItem="dxQ-mU-0gl" secondAttribute="bottom" id="WGm-cz-Lsq"/>
+                            <constraint firstItem="zii-gx-Zre" firstAttribute="top" secondItem="dxQ-mU-0gl" secondAttribute="bottom" constant="-11" id="i3k-wr-XrB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -209,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxN-Zh-dee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1515" y="145"/>
+            <point key="canvasLocation" x="1616" y="140"/>
         </scene>
     </scenes>
 </document>
