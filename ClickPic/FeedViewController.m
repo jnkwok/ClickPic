@@ -10,12 +10,16 @@
 #import "AFHTTPRequestOperationManager.h"
 #import "FeedCell.h"
 @import CoreLocation;
+#import <QuartzCore/QuartzCore.h>
 
-@interface FeedViewController () <UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate>
+
+@interface FeedViewController () <UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic, strong) NSArray *content;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UILabel *emptyLabel;
+@property (nonatomic, strong) UIImageView *selectedImage;
+@property (nonatomic, assign) BOOL hasNewImage;
 
 @end
 
@@ -83,8 +87,34 @@
 }
 
 - (IBAction)addPic:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self; //ignore this warning
     
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else {
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    //[self presentModalViewController:picker animated:YES];
+    [self presentViewController:picker animated:YES completion:nil];
 }
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *) Picker {
+    //[[Picker parentViewController] dismissModalViewControllerAnimated:YES];
+    [[Picker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    //[Picker release];
+} //uhhh does not work
+
+- (void)imagePickerController:(UIImagePickerController *) Picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    self.selectedImage.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    //[[Picker parentViewController] dismissModalViewControllerAnimated:YES];
+    [[Picker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    _hasNewImage = YES;
+    //[Picker release];
+}
+
 
 - (IBAction)editSettings:(id)sender {
     
