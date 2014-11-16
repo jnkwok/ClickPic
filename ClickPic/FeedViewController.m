@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) NSArray *content;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet UILabel *emptyLabel;
 
 @end
 
@@ -36,6 +37,9 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:@"" parameters:coords success:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.content = responseObject;
+        if ([self.content count] > 0) {
+            self.emptyLabel.hidden = YES;
+        }
         [self.feedTableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error: %@", [error description]);
@@ -79,6 +83,10 @@
 }
 
 - (IBAction)addPic:(id)sender {
+    
+}
+
+- (IBAction)editSettings:(id)sender {
     
 }
 
