@@ -105,6 +105,7 @@
 		A1887BFD1A186E25000FE1A7 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1887BFC1A186E25000FE1A7 /* FeedCell.m */; };
 		A1887BFF1A1871C4000FE1A7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1887BFE1A1871C4000FE1A7 /* CoreLocation.framework */; };
 		A1887C021A187B66000FE1A7 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1887C011A187B66000FE1A7 /* FeedViewController.m */; };
+		A1887C051A1883A2000FE1A7 /* TakePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1887C041A1883A2000FE1A7 /* TakePicViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -289,6 +290,8 @@
 		A1887BFE1A1871C4000FE1A7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A1887C001A187B66000FE1A7 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		A1887C011A187B66000FE1A7 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		A1887C031A1883A2000FE1A7 /* TakePicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakePicViewController.h; sourceTree = "<group>"; };
+		A1887C041A1883A2000FE1A7 /* TakePicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakePicViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +352,8 @@
 				A1887C011A187B66000FE1A7 /* FeedViewController.m */,
 				A1887BFB1A186E25000FE1A7 /* FeedCell.h */,
 				A1887BFC1A186E25000FE1A7 /* FeedCell.m */,
+				A1887C031A1883A2000FE1A7 /* TakePicViewController.h */,
+				A1887C041A1883A2000FE1A7 /* TakePicViewController.m */,
 			);
 			path = ClickPic;
 			sourceTree = "<group>";
@@ -924,6 +929,7 @@
 				A126F9141A1816EF0039EC8A /* UIAlertView+AFNetworking.m in Sources */,
 				A126F8C81A1816EF0039EC8A /* AFHTTPRequestOperationManager.m in Sources */,
 				A126F8CB1A1816EF0039EC8A /* AFSecurityPolicy.m in Sources */,
+				A1887C051A1883A2000FE1A7 /* TakePicViewController.m in Sources */,
 				A126F9151A1816EF0039EC8A /* UIButton+AFNetworking.m in Sources */,
 				A126F8D81A1816EF0039EC8A /* GlobalTimelineViewController.m in Sources */,
 				A126F80D1A180C010039EC8A /* DetailViewController.m in Sources */,

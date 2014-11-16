@@ -251,5 +251,55 @@
             </objects>
             <point key="canvasLocation" x="1616" y="140"/>
         </scene>
+        <!--Take Pic View Controller-->
+        <scene sceneID="Htw-T8-quV">
+            <objects>
+                <viewController storyboardIdentifier="takepic" id="bpU-eW-Pns" customClass="TakePicViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DG0-bU-s0C"/>
+                        <viewControllerLayoutGuide type="bottom" id="2cl-c4-fMx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3gJ-0p-fwn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2a3-FA-4Qd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJ0-jk-Wxf">
+                                <rect key="frame" x="7" y="20" width="586" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XdB-kD-86r"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2a3-FA-4Qd" firstAttribute="leading" secondItem="3gJ-0p-fwn" secondAttribute="leadingMargin" constant="-16" id="0ba-CM-UNF"/>
+                            <constraint firstItem="2a3-FA-4Qd" firstAttribute="top" secondItem="DG0-bU-s0C" secondAttribute="bottom" constant="-20" id="2IH-cS-8x6"/>
+                            <constraint firstItem="2a3-FA-4Qd" firstAttribute="top" secondItem="DG0-bU-s0C" secondAttribute="bottom" constant="40" id="Ccx-ik-As1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mJ0-jk-Wxf" secondAttribute="trailing" constant="-9" id="QQR-e7-Tqf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2a3-FA-4Qd" secondAttribute="trailing" constant="-16" id="UqW-3u-WlM"/>
+                            <constraint firstItem="mJ0-jk-Wxf" firstAttribute="leading" secondItem="3gJ-0p-fwn" secondAttribute="leadingMargin" constant="-9" id="bjU-4v-HHV"/>
+                            <constraint firstItem="2cl-c4-fMx" firstAttribute="top" secondItem="2a3-FA-4Qd" secondAttribute="bottom" id="fLz-Hm-f5d"/>
+                            <constraint firstItem="mJ0-jk-Wxf" firstAttribute="top" secondItem="DG0-bU-s0C" secondAttribute="bottom" id="iaK-MS-dmg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ccx-ik-As1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="caption" destination="mJ0-jk-Wxf" id="AbE-hO-yD2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jjv-C8-59K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2343" y="149"/>
+        </scene>
     </scenes>
 </document>
