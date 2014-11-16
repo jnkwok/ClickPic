@@ -52,9 +52,10 @@
         @"password" : self.passwordField.text};
     [manager POST:@"" parameters:auth success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if ([responseObject objectForKey:@"userid"]) {
-            
+            [self goToFeed];
         } else {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Failed" message:@"Incorrect username or password" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error: %@", [error description]);
@@ -73,9 +74,16 @@
                            @"password" : self.passwordField.text};
     [manager POST:@"" parameters:auth success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if ([responseObject objectForKey:@"userid"]) {
-            
+            [self goToFeed];
         } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Failed" message:@"Incorrect username or password" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            NSString *message;
+            if ([[responseObject objectForKey:@""] isEqualToString:@""]) {
+                message = @"Username taken";
+            } else {
+                message = @"Issued occured. Please try again";
+            }
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Signup Failed" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error: %@", [error description]);
@@ -85,6 +93,12 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
+}
+
+- (void)goToFeed {
+    UIViewController *fvc = [self.storyboard instantiateViewControllerWithIdentifier:@"feed"];
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    [self.navigationController pushViewController:fvc animated:YES];
 }
 
 @end

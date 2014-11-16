@@ -102,6 +102,9 @@
 		A126F9171A1816EF0039EC8A /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A126F8BF1A1816EF0039EC8A /* UIProgressView+AFNetworking.m */; };
 		A126F9181A1816EF0039EC8A /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A126F8C11A1816EF0039EC8A /* UIRefreshControl+AFNetworking.m */; };
 		A126F9191A1816EF0039EC8A /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A126F8C31A1816EF0039EC8A /* UIWebView+AFNetworking.m */; };
+		A1887BFD1A186E25000FE1A7 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1887BFC1A186E25000FE1A7 /* FeedCell.m */; };
+		A1887BFF1A1871C4000FE1A7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1887BFE1A1871C4000FE1A7 /* CoreLocation.framework */; };
+		A1887C021A187B66000FE1A7 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1887C011A187B66000FE1A7 /* FeedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +284,11 @@
 		A126F8C11A1816EF0039EC8A /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		A126F8C21A1816EF0039EC8A /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		A126F8C31A1816EF0039EC8A /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		A1887BFB1A186E25000FE1A7 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
+		A1887BFC1A186E25000FE1A7 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
+		A1887BFE1A1871C4000FE1A7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A1887C001A187B66000FE1A7 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		A1887C011A187B66000FE1A7 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +296,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1887BFF1A1871C4000FE1A7 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +331,7 @@
 		A126F8001A180C010039EC8A /* ClickPic */ = {
 			isa = PBXGroup;
 			children = (
+				A1887BFE1A1871C4000FE1A7 /* CoreLocation.framework */,
 				A126F82D1A1816EF0039EC8A /* AFNetworking-master */,
 				A126F8051A180C010039EC8A /* AppDelegate.h */,
 				A126F8061A180C010039EC8A /* AppDelegate.m */,
@@ -335,6 +345,10 @@
 				A126F8011A180C010039EC8A /* Supporting Files */,
 				A126F82A1A18156A0039EC8A /* LoginViewController.h */,
 				A126F82B1A18156A0039EC8A /* LoginViewController.m */,
+				A1887C001A187B66000FE1A7 /* FeedViewController.h */,
+				A1887C011A187B66000FE1A7 /* FeedViewController.m */,
+				A1887BFB1A186E25000FE1A7 /* FeedCell.h */,
+				A1887BFC1A186E25000FE1A7 /* FeedCell.m */,
 			);
 			path = ClickPic;
 			sourceTree = "<group>";
@@ -892,10 +906,12 @@
 				A126F9021A1816EF0039EC8A /* AFHTTPRequestOperationTests.m in Sources */,
 				A126F90E1A1816EF0039EC8A /* AFPropertyListResponseSerializerTests.m in Sources */,
 				A126F9061A1816EF0039EC8A /* AFNetworkingTests.m in Sources */,
+				A1887C021A187B66000FE1A7 /* FeedViewController.m in Sources */,
 				A126F9041A1816EF0039EC8A /* AFJSONRequestOperationTests.m in Sources */,
 				A126F8CD1A1816EF0039EC8A /* AFURLRequestSerialization.m in Sources */,
 				A126F9171A1816EF0039EC8A /* UIProgressView+AFNetworking.m in Sources */,
 				A126F9081A1816EF0039EC8A /* AFHTTPRequestOperationTests.m in Sources */,
+				A1887BFD1A186E25000FE1A7 /* FeedCell.m in Sources */,
 				A126F90B1A1816EF0039EC8A /* AFHTTPSessionManagerTests.m in Sources */,
 				A126F8DB1A1816EF0039EC8A /* PostTableViewCell.m in Sources */,
 				A126F8071A180C010039EC8A /* AppDelegate.m in Sources */,
